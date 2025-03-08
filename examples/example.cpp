@@ -1,4 +1,4 @@
-#include <polygonio.hpp>
+#include <polygonio.h>
 #include <iostream>
 
 int main()
