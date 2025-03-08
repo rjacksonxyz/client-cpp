@@ -2,5 +2,3 @@
 /Users/rjacksonxyz/workspace/client-cpp/build/CMakeFiles/example.dir
 /Users/rjacksonxyz/workspace/client-cpp/build/CMakeFiles/edit_cache.dir
 /Users/rjacksonxyz/workspace/client-cpp/build/CMakeFiles/rebuild_cache.dir
-/Users/rjacksonxyz/workspace/client-cpp/build/_deps/nlohmann_json-build/CMakeFiles/edit_cache.dir
-/Users/rjacksonxyz/workspace/client-cpp/build/_deps/nlohmann_json-build/CMakeFiles/rebuild_cache.dir

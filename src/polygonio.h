@@ -1,5 +1,6 @@
 #pragma once
 #include "websocket/models/models.h"
+#include "websocket/client.h"
 
 namespace polygonio
 {

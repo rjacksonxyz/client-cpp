@@ -14,7 +14,8 @@ if(NOT EXISTS ${CMAKE_CURRENT_BINARY_DIR}/cmake/CPM.cmake)
   )
 endif()
 include(${CMAKE_CURRENT_BINARY_DIR}/cmake/CPM.cmake)
-# /opt/homebrew/Cellar/boost/1.87.0
+
+# temporary concession for local development
 set(Boost_DIR "/opt/homebrew/Cellar/boost/1.87.0/lib/cmake/Boost-1.87.0")
 find_package(Boost REQUIRED COMPONENTS system thread json)
 

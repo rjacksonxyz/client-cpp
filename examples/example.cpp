@@ -10,6 +10,5 @@ int main()
         "it's a me, Mario!",
         polygonio::models::ActionToString(polygonio::models::Action::Auth),
         "(x, y, z)"};
-    nlohmann::json j = cm;
-    std::cout << j << std::endl;
+    std::cout << "0" << std::endl;
 }

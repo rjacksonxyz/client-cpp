@@ -1,5 +1,4 @@
-#include "polygonio.hpp"
-#include "websocket/models/models.h"
+#include "polygonio.h"
 
 namespace polygonio
 {

@@ -17,21 +17,29 @@
 //Build the tests
 BUILD_TESTS:BOOL=OFF
 
+//The directory containing a CMake configuration file for Boost.
+Boost_DIR:PATH=/opt/homebrew/lib/cmake/Boost-1.87.0
+
+//Path to a file.
+Boost_INCLUDE_DIR:PATH=/opt/homebrew/Cellar/boost/1.87.0/include
+
+Boost_JSON_LIBRARY_RELEASE:STRING=/opt/homebrew/Cellar/boost/1.87.0/lib/libboost_json.dylib
+
+Boost_SYSTEM_LIBRARY_RELEASE:STRING=/opt/homebrew/Cellar/boost/1.87.0/lib/libboost_system.dylib
+
+Boost_THREAD_LIBRARY_RELEASE:STRING=/opt/homebrew/Cellar/boost/1.87.0/lib/libboost_thread.dylib
+
 //Path to a program.
 CMAKE_ADDR2LINE:FILEPATH=CMAKE_ADDR2LINE-NOTFOUND
 
 //Path to a program.
-CMAKE_AR:FILEPATH=/Library/Developer/CommandLineTools/usr/bin/ar
+CMAKE_AR:FILEPATH=/usr/bin/ar
 
-//Choose the type of build, options are: None Debug Release RelWithDebInfo
-// MinSizeRel ...
-CMAKE_BUILD_TYPE:STRING=
+//No help, variable specified on the command line.
+CMAKE_BUILD_TYPE:STRING=Debug
 
-//Enable/Disable color output during build.
-CMAKE_COLOR_MAKEFILE:BOOL=ON
-
-//CXX compiler
-CMAKE_CXX_COMPILER:FILEPATH=/Library/Developer/CommandLineTools/usr/bin/c++
+//No help, variable specified on the command line.
+CMAKE_CXX_COMPILER:FILEPATH=/usr/bin/clang++
 
 //Flags used by the CXX compiler during all build types.
 CMAKE_CXX_FLAGS:STRING=
@@ -48,23 +56,8 @@ CMAKE_CXX_FLAGS_RELEASE:STRING=-O3 -DNDEBUG
 //Flags used by the CXX compiler during RELWITHDEBINFO builds.
 CMAKE_CXX_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
 
-//C compiler
-CMAKE_C_COMPILER:FILEPATH=/Library/Developer/CommandLineTools/usr/bin/cc
-
-//Flags used by the C compiler during all build types.
-CMAKE_C_FLAGS:STRING=
-
-//Flags used by the C compiler during DEBUG builds.
-CMAKE_C_FLAGS_DEBUG:STRING=-g
-
-//Flags used by the C compiler during MINSIZEREL builds.
-CMAKE_C_FLAGS_MINSIZEREL:STRING=-Os -DNDEBUG
-
-//Flags used by the C compiler during RELEASE builds.
-CMAKE_C_FLAGS_RELEASE:STRING=-O3 -DNDEBUG
-
-//Flags used by the C compiler during RELWITHDEBINFO builds.
-CMAKE_C_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
+//No help, variable specified on the command line.
+CMAKE_C_COMPILER:FILEPATH=/usr/bin/clang
 
 //Path to a program.
 CMAKE_DLLTOOL:FILEPATH=CMAKE_DLLTOOL-NOTFOUND
@@ -84,71 +77,26 @@ CMAKE_EXE_LINKER_FLAGS_RELEASE:STRING=
 //Flags used by the linker during RELWITHDEBINFO builds.
 CMAKE_EXE_LINKER_FLAGS_RELWITHDEBINFO:STRING=
 
-//Enable/Disable output of compile commands during generation.
-CMAKE_EXPORT_COMPILE_COMMANDS:BOOL=
+//Enable/Disable output of build database during the build.
+CMAKE_EXPORT_BUILD_DATABASE:BOOL=
+
+//No help, variable specified on the command line.
+CMAKE_EXPORT_COMPILE_COMMANDS:BOOL=TRUE
 
 //Value Computed by CMake.
 CMAKE_FIND_PACKAGE_REDIRECTS_DIR:STATIC=/Users/rjacksonxyz/workspace/client-cpp/build/CMakeFiles/pkgRedirects
 
-//User executables (bin)
-CMAKE_INSTALL_BINDIR:PATH=bin
-
-//Read-only architecture-independent data (DATAROOTDIR)
-CMAKE_INSTALL_DATADIR:PATH=
-
-//Read-only architecture-independent data root (share)
-CMAKE_INSTALL_DATAROOTDIR:PATH=share
-
-//Documentation root (DATAROOTDIR/doc/PROJECT_NAME)
-CMAKE_INSTALL_DOCDIR:PATH=
-
-//C header files (include)
-CMAKE_INSTALL_INCLUDEDIR:PATH=include
-
-//Info documentation (DATAROOTDIR/info)
-CMAKE_INSTALL_INFODIR:PATH=
-
-//Object code libraries (lib)
-CMAKE_INSTALL_LIBDIR:PATH=lib
-
-//Program executables (libexec)
-CMAKE_INSTALL_LIBEXECDIR:PATH=libexec
-
-//Locale-dependent data (DATAROOTDIR/locale)
-CMAKE_INSTALL_LOCALEDIR:PATH=
-
-//Modifiable single-machine data (var)
-CMAKE_INSTALL_LOCALSTATEDIR:PATH=var
-
-//Man documentation (DATAROOTDIR/man)
-CMAKE_INSTALL_MANDIR:PATH=
-
 //Path to a program.
 CMAKE_INSTALL_NAME_TOOL:FILEPATH=/usr/bin/install_name_tool
-
-//C header files for non-gcc (/usr/include)
-CMAKE_INSTALL_OLDINCLUDEDIR:PATH=/usr/include
 
 //Install path prefix, prepended onto install directories.
 CMAKE_INSTALL_PREFIX:PATH=/usr/local
 
-//Run-time variable data (LOCALSTATEDIR/run)
-CMAKE_INSTALL_RUNSTATEDIR:PATH=
-
-//System admin executables (sbin)
-CMAKE_INSTALL_SBINDIR:PATH=sbin
-
-//Modifiable architecture-independent data (com)
-CMAKE_INSTALL_SHAREDSTATEDIR:PATH=com
-
-//Read-only single-machine data (etc)
-CMAKE_INSTALL_SYSCONFDIR:PATH=etc
-
 //Path to a program.
-CMAKE_LINKER:FILEPATH=/Library/Developer/CommandLineTools/usr/bin/ld
+CMAKE_LINKER:FILEPATH=/usr/bin/ld
 
-//Path to a program.
-CMAKE_MAKE_PROGRAM:FILEPATH=/usr/bin/make
+//Program used to build from build.ninja files.
+CMAKE_MAKE_PROGRAM:FILEPATH=/opt/homebrew/bin/ninja
 
 //Flags used by the linker during the creation of modules during
 // all build types.
@@ -171,13 +119,13 @@ CMAKE_MODULE_LINKER_FLAGS_RELEASE:STRING=
 CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO:STRING=
 
 //Path to a program.
-CMAKE_NM:FILEPATH=/Library/Developer/CommandLineTools/usr/bin/nm
+CMAKE_NM:FILEPATH=/usr/bin/nm
 
 //Path to a program.
 CMAKE_OBJCOPY:FILEPATH=CMAKE_OBJCOPY-NOTFOUND
 
 //Path to a program.
-CMAKE_OBJDUMP:FILEPATH=/Library/Developer/CommandLineTools/usr/bin/objdump
+CMAKE_OBJDUMP:FILEPATH=/usr/bin/objdump
 
 //Build architectures for OSX
 CMAKE_OSX_ARCHITECTURES:STRING=
@@ -215,7 +163,7 @@ CMAKE_PROJECT_VERSION_PATCH:STATIC=0
 CMAKE_PROJECT_VERSION_TWEAK:STATIC=
 
 //Path to a program.
-CMAKE_RANLIB:FILEPATH=/Library/Developer/CommandLineTools/usr/bin/ranlib
+CMAKE_RANLIB:FILEPATH=/usr/bin/ranlib
 
 //Path to a program.
 CMAKE_READELF:FILEPATH=CMAKE_READELF-NOTFOUND
@@ -268,7 +216,7 @@ CMAKE_STATIC_LINKER_FLAGS_RELEASE:STRING=
 CMAKE_STATIC_LINKER_FLAGS_RELWITHDEBINFO:STRING=
 
 //Path to a program.
-CMAKE_STRIP:FILEPATH=/Library/Developer/CommandLineTools/usr/bin/strip
+CMAKE_STRIP:FILEPATH=/usr/bin/strip
 
 //Path to a program.
 CMAKE_TAPI:FILEPATH=/Library/Developer/CommandLineTools/usr/bin/tapi
@@ -314,72 +262,23 @@ FETCHCONTENT_FULLY_DISCONNECTED:BOOL=OFF
 //Enables QUIET option for all content population
 FETCHCONTENT_QUIET:BOOL=ON
 
-//When not empty, overrides where to find pre-populated content
-// for nlohmann_json
-FETCHCONTENT_SOURCE_DIR_NLOHMANN_JSON:PATH=
-
 //Enables UPDATE_DISCONNECTED behavior for all content population
 FETCHCONTENT_UPDATES_DISCONNECTED:BOOL=OFF
 
-//Enables UPDATE_DISCONNECTED behavior just for population of nlohmann_json
-FETCHCONTENT_UPDATES_DISCONNECTED_NLOHMANN_JSON:BOOL=OFF
+//The directory containing a CMake configuration file for boost_container.
+boost_container_DIR:PATH=/opt/homebrew/Cellar/boost/1.87.0/lib/cmake/boost_container-1.87.0
 
-//Git command line client
-GIT_EXECUTABLE:FILEPATH=/usr/bin/git
+//The directory containing a CMake configuration file for boost_headers.
+boost_headers_DIR:PATH=/opt/homebrew/Cellar/boost/1.87.0/lib/cmake/boost_headers-1.87.0
 
-//Enable CI build targets.
-JSON_CI:BOOL=OFF
+//The directory containing a CMake configuration file for boost_json.
+boost_json_DIR:PATH=/opt/homebrew/Cellar/boost/1.87.0/lib/cmake/boost_json-1.87.0
 
-//Use extended diagnostic messages.
-JSON_Diagnostics:BOOL=OFF
+//The directory containing a CMake configuration file for boost_system.
+boost_system_DIR:PATH=/opt/homebrew/Cellar/boost/1.87.0/lib/cmake/boost_system-1.87.0
 
-//Disable default integer enum serialization.
-JSON_DisableEnumSerialization:BOOL=OFF
-
-//Place use-defined string literals in the global namespace.
-JSON_GlobalUDLs:BOOL=ON
-
-//Enable implicit conversions.
-JSON_ImplicitConversions:BOOL=ON
-
-//Install CMake targets during install step.
-JSON_Install:BOOL=OFF
-
-//Enable legacy discarded value comparison.
-JSON_LegacyDiscardedValueComparison:BOOL=OFF
-
-//Use non-amalgamated version of the library.
-JSON_MultipleHeaders:BOOL=ON
-
-//Include as system headers (skip for clang-tidy).
-JSON_SystemInclude:BOOL=OFF
-
-//Value Computed by CMake
-client-cpp_BINARY_DIR:STATIC=/Users/rjacksonxyz/workspace/client-cpp/build
-
-//Value Computed by CMake
-client-cpp_IS_TOP_LEVEL:STATIC=ON
-
-//Value Computed by CMake
-client-cpp_SOURCE_DIR:STATIC=/Users/rjacksonxyz/workspace/client-cpp
-
-//Value Computed by CMake
-nlohmann_json_BINARY_DIR:STATIC=/Users/rjacksonxyz/workspace/client-cpp/build/_deps/nlohmann_json-build
-
-//Value Computed by CMake
-nlohmann_json_IS_TOP_LEVEL:STATIC=OFF
-
-//Value Computed by CMake
-nlohmann_json_SOURCE_DIR:STATIC=/Users/rjacksonxyz/workspace/client-cpp/build/_deps/nlohmann_json-src
-
-//Value Computed by CMake
-polygon-cpp_BINARY_DIR:STATIC=/Users/rjacksonxyz/workspace/client-cpp/build
-
-//Value Computed by CMake
-polygon-cpp_IS_TOP_LEVEL:STATIC=ON
-
-//Value Computed by CMake
-polygon-cpp_SOURCE_DIR:STATIC=/Users/rjacksonxyz/workspace/client-cpp
+//The directory containing a CMake configuration file for boost_thread.
+boost_thread_DIR:PATH=/opt/homebrew/Cellar/boost/1.87.0/lib/cmake/boost_thread-1.87.0
 
 //Value Computed by CMake
 polygonio_BINARY_DIR:STATIC=/Users/rjacksonxyz/workspace/client-cpp/build
@@ -395,6 +294,8 @@ polygonio_SOURCE_DIR:STATIC=/Users/rjacksonxyz/workspace/client-cpp
 # INTERNAL cache entries
 ########################
 
+//ADVANCED property for variable: Boost_DIR
+Boost_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_ADDR2LINE
 CMAKE_ADDR2LINE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_AR
@@ -407,8 +308,6 @@ CMAKE_CACHE_MAJOR_VERSION:INTERNAL=3
 CMAKE_CACHE_MINOR_VERSION:INTERNAL=31
 //Patch version of cmake used to create the current loaded cache
 CMAKE_CACHE_PATCH_VERSION:INTERNAL=6
-//ADVANCED property for variable: CMAKE_COLOR_MAKEFILE
-CMAKE_COLOR_MAKEFILE-ADVANCED:INTERNAL=1
 //Path to CMake executable.
 CMAKE_COMMAND:INTERNAL=/opt/homebrew/bin/cmake
 //Path to cpack program executable.
@@ -427,18 +326,6 @@ CMAKE_CXX_FLAGS_MINSIZEREL-ADVANCED:INTERNAL=1
 CMAKE_CXX_FLAGS_RELEASE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_CXX_FLAGS_RELWITHDEBINFO
 CMAKE_CXX_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_C_COMPILER
-CMAKE_C_COMPILER-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_C_FLAGS
-CMAKE_C_FLAGS-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_C_FLAGS_DEBUG
-CMAKE_C_FLAGS_DEBUG-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_C_FLAGS_MINSIZEREL
-CMAKE_C_FLAGS_MINSIZEREL-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_C_FLAGS_RELEASE
-CMAKE_C_FLAGS_RELEASE-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_C_FLAGS_RELWITHDEBINFO
-CMAKE_C_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_DLLTOOL
 CMAKE_DLLTOOL-ADVANCED:INTERNAL=1
 //Path to cache edit program executable.
@@ -455,55 +342,25 @@ CMAKE_EXE_LINKER_FLAGS_MINSIZEREL-ADVANCED:INTERNAL=1
 CMAKE_EXE_LINKER_FLAGS_RELEASE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_EXE_LINKER_FLAGS_RELWITHDEBINFO
 CMAKE_EXE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_EXPORT_COMPILE_COMMANDS
-CMAKE_EXPORT_COMPILE_COMMANDS-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_EXPORT_BUILD_DATABASE
+CMAKE_EXPORT_BUILD_DATABASE-ADVANCED:INTERNAL=1
 //Name of external makefile project generator.
 CMAKE_EXTRA_GENERATOR:INTERNAL=
 //Name of generator.
-CMAKE_GENERATOR:INTERNAL=Unix Makefiles
+CMAKE_GENERATOR:INTERNAL=Ninja
 //Generator instance identifier.
 CMAKE_GENERATOR_INSTANCE:INTERNAL=
 //Name of generator platform.
 CMAKE_GENERATOR_PLATFORM:INTERNAL=
 //Name of generator toolset.
 CMAKE_GENERATOR_TOOLSET:INTERNAL=
+//Test CMAKE_HAVE_LIBC_PTHREAD
+CMAKE_HAVE_LIBC_PTHREAD:INTERNAL=1
 //Source directory with the top level CMakeLists.txt file for this
 // project
 CMAKE_HOME_DIRECTORY:INTERNAL=/Users/rjacksonxyz/workspace/client-cpp
-//ADVANCED property for variable: CMAKE_INSTALL_BINDIR
-CMAKE_INSTALL_BINDIR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_INSTALL_DATADIR
-CMAKE_INSTALL_DATADIR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_INSTALL_DATAROOTDIR
-CMAKE_INSTALL_DATAROOTDIR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_INSTALL_DOCDIR
-CMAKE_INSTALL_DOCDIR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_INSTALL_INCLUDEDIR
-CMAKE_INSTALL_INCLUDEDIR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_INSTALL_INFODIR
-CMAKE_INSTALL_INFODIR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_INSTALL_LIBDIR
-CMAKE_INSTALL_LIBDIR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_INSTALL_LIBEXECDIR
-CMAKE_INSTALL_LIBEXECDIR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_INSTALL_LOCALEDIR
-CMAKE_INSTALL_LOCALEDIR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_INSTALL_LOCALSTATEDIR
-CMAKE_INSTALL_LOCALSTATEDIR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_INSTALL_MANDIR
-CMAKE_INSTALL_MANDIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_INSTALL_NAME_TOOL
 CMAKE_INSTALL_NAME_TOOL-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_INSTALL_OLDINCLUDEDIR
-CMAKE_INSTALL_OLDINCLUDEDIR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_INSTALL_RUNSTATEDIR
-CMAKE_INSTALL_RUNSTATEDIR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_INSTALL_SBINDIR
-CMAKE_INSTALL_SBINDIR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_INSTALL_SHAREDSTATEDIR
-CMAKE_INSTALL_SHAREDSTATEDIR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_INSTALL_SYSCONFDIR
-CMAKE_INSTALL_SYSCONFDIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_LINKER
 CMAKE_LINKER-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_MAKE_PROGRAM
@@ -521,7 +378,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=2
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
@@ -572,15 +429,19 @@ CPM_DRY_RUN:INTERNAL=OFF
 CPM_FILE:INTERNAL=/Users/rjacksonxyz/workspace/client-cpp/build/cmake/CPM.cmake
 CPM_INDENT:INTERNAL=CPM:
 CPM_MODULE_PATH:INTERNAL=/Users/rjacksonxyz/workspace/client-cpp/build/CPM_modules
-CPM_PACKAGES:INTERNAL=nlohmann_json
+CPM_PACKAGES:INTERNAL=
 CPM_PACKAGE_LOCK_FILE:INTERNAL=/Users/rjacksonxyz/workspace/client-cpp/build/cpm-package-lock.cmake
-CPM_PACKAGE_nlohmann_json_BINARY_DIR:INTERNAL=/Users/rjacksonxyz/workspace/client-cpp/build/_deps/nlohmann_json-build
-CPM_PACKAGE_nlohmann_json_SOURCE_DIR:INTERNAL=/Users/rjacksonxyz/workspace/client-cpp/build/_deps/nlohmann_json-src
-CPM_PACKAGE_nlohmann_json_VERSION:INTERNAL=3.11.2
 CPM_VERSION:INTERNAL=0.38.6
-//ADVANCED property for variable: GIT_EXECUTABLE
-GIT_EXECUTABLE-ADVANCED:INTERNAL=1
-NLOHMANN_JSON_CONFIG_INSTALL_DIR:INTERNAL=share/cmake/nlohmann_json
-//CMAKE_INSTALL_PREFIX during last run
-_GNUInstallDirs_LAST_CMAKE_INSTALL_PREFIX:INTERNAL=/usr/local
+//Details about finding Boost
+FIND_PACKAGE_MESSAGE_DETAILS_Boost:INTERNAL=[/opt/homebrew/Cellar/boost/1.87.0/lib/cmake/Boost-1.87.0/BoostConfig.cmake][cfound components: system thread json ][v1.87.0()]
+//ADVANCED property for variable: boost_container_DIR
+boost_container_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: boost_headers_DIR
+boost_headers_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: boost_json_DIR
+boost_json_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: boost_system_DIR
+boost_system_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: boost_thread_DIR
+boost_thread_DIR-ADVANCED:INTERNAL=1
 
