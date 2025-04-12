@@ -1,14 +1,16 @@
-#include <polygonio.h>
+#include <websocket/client.hpp>
+#include <websocket/config.hpp>
 #include <iostream>
 
 int main()
 {
-    polygonio::Client client("POLYGON_API_KEY");
-    polygonio::models::ControlMessage cm{
-        polygonio::models::EventType("auth"),
-        "OK",
-        "it's a me, Mario!",
-        polygonio::models::ActionToString(polygonio::models::Action::Auth),
-        "(x, y, z)"};
+    net::io_context ioc;
+    ws::Config config;
+    config.APIKey = "POLYGON_API_KEY";
+    config.feed = ws::Feed::RealTime;
+    config.market = ws::Market::Stocks;
+    std::make_shared<Client>(config, ioc)->connect();
+    ioc.run();
+
     std::cout << "0" << std::endl;
 }

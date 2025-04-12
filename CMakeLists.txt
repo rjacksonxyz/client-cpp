@@ -15,7 +15,7 @@ if(NOT EXISTS ${CMAKE_CURRENT_BINARY_DIR}/cmake/CPM.cmake)
 endif()
 include(${CMAKE_CURRENT_BINARY_DIR}/cmake/CPM.cmake)
 # /opt/homebrew/Cellar/boost/1.87.0
-set(Boost_DIR "/opt/homebrew/Cellar/boost/1.87.0/lib/cmake/Boost-1.87.0")
+# set(Boost_DIR "/opt/homebrew/Cellar/boost/1.87.0/lib/cmake/Boost-1.87.0")
 find_package(Boost REQUIRED COMPONENTS system thread json)
 
 if(Boost_FOUND)
@@ -93,3 +93,13 @@ if(BUILD_TESTS)
     enable_testing()
     add_subdirectory(tests)
 endif()
+
+# find_package(OpenSSL REQUIRED)
+# target_link_libraries(${PROJECT_NAME} 
+#     PRIVATE 
+#     OpenSSL::SSL 
+#     OpenSSL::Crypto
+# )
+# set(OPENSSL_ROOT_DIR "/opt/homebrew/opt/openssl@3")
+# set(OPENSSL_LIBRARIES "/opt/homebrew/opt/openssl@3/lib")
+# include_directories("/opt/homebrew/opt/openssl@3/include")

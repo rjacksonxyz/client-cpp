@@ -52,6 +52,22 @@
         "unordered_map": "cpp",
         "variant": "cpp",
         "algorithm": "cpp",
-        "*.ipp": "cpp"
+        "*.ipp": "cpp",
+        "list": "cpp",
+        "map": "cpp",
+        "__tree": "cpp",
+        "any": "cpp",
+        "cfenv": "cpp",
+        "codecvt": "cpp",
+        "condition_variable": "cpp",
+        "csignal": "cpp",
+        "future": "cpp",
+        "iomanip": "cpp",
+        "iostream": "cpp",
+        "shared_mutex": "cpp",
+        "source_location": "cpp",
+        "span": "cpp",
+        "thread": "cpp",
+        "typeindex": "cpp"
     }
 }

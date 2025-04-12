@@ -1,0 +1,2 @@
+/Library/Developer/CommandLineTools/usr/bin/ar qc libpolygonio.a CMakeFiles/polygonio.dir/CMakeFiles/3.31.6/CompilerIdCXX/CMakeCXXCompilerId.cpp.o CMakeFiles/polygonio.dir/polygonio.cpp.o CMakeFiles/polygonio.dir/websocket/config.cpp.o CMakeFiles/polygonio.dir/websocket/models/models.cpp.o
+/Library/Developer/CommandLineTools/usr/bin/ranlib libpolygonio.a
