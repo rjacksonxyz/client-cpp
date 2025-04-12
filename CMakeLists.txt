@@ -14,8 +14,7 @@ if(NOT EXISTS ${CMAKE_CURRENT_BINARY_DIR}/cmake/CPM.cmake)
   )
 endif()
 include(${CMAKE_CURRENT_BINARY_DIR}/cmake/CPM.cmake)
-# /opt/homebrew/Cellar/boost/1.87.0
-# set(Boost_DIR "/opt/homebrew/Cellar/boost/1.87.0/lib/cmake/Boost-1.87.0")
+cmake_policy(SET CMP0167 NEW)
 find_package(Boost REQUIRED COMPONENTS system thread json)
 
 if(Boost_FOUND)
@@ -23,19 +22,10 @@ if(Boost_FOUND)
 else()
     message(FATAL_ERROR "Boost library not found")
 endif()
-# find_package(Boost 1.83.0 QUIET)
 
-# if(NOT Boost_FOUND)
-#     message(STATUS "Boost not found locally. Downloading via CPM...")
-#     set(BOOST_INCLUDE_LIBRARIES "thread;asio;system;beast;json")
-
-#     CPMAddPackage(
-#         NAME Boost
-#         URL "https://github.com/boostorg/boost/releases/download/boost-1.83.0/boost-1.83.0.tar.xz"
-#     )
-# else()
-#     message(STATUS "Found Boost: ${Boost_VERSION}")
-# endif()
+# Add before find_package(OpenSSL REQUIRED)
+# set(CMAKE_FIND_DEBUG_MODE ON)
+find_package(OpenSSL REQUIRED)
 
 # Define source files for our library
 # Updated to reflect the new directory structure
@@ -69,12 +59,14 @@ target_include_directories(${PROJECT_NAME}
         ${CMAKE_CURRENT_SOURCE_DIR}
 )
 
-# Link libary with dependencies
+# Link library with dependencies
 target_link_libraries(${PROJECT_NAME}
     PUBLIC
         Boost::system
         Boost::thread
         Boost::json
+        ${OPENSSL_SSL_LIBRARY}
+        ${OPENSSL_CRYPTO_LIBRARY}
 )
 
 # Add example executable
@@ -85,6 +77,8 @@ target_link_libraries(example
         Boost::system
         Boost::thread
         Boost::json
+        ${OPENSSL_SSL_LIBRARY}
+        ${OPENSSL_CRYPTO_LIBRARY}
 )
 
 # Option for building tests
@@ -93,13 +87,3 @@ if(BUILD_TESTS)
     enable_testing()
     add_subdirectory(tests)
 endif()
-
-# find_package(OpenSSL REQUIRED)
-# target_link_libraries(${PROJECT_NAME} 
-#     PRIVATE 
-#     OpenSSL::SSL 
-#     OpenSSL::Crypto
-# )
-# set(OPENSSL_ROOT_DIR "/opt/homebrew/opt/openssl@3")
-# set(OPENSSL_LIBRARIES "/opt/homebrew/opt/openssl@3/lib")
-# include_directories("/opt/homebrew/opt/openssl@3/include")

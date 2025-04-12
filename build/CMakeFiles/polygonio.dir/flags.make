@@ -4,7 +4,7 @@
 # compile CXX with /Library/Developer/CommandLineTools/usr/bin/c++
 CXX_DEFINES = -DBOOST_CONTAINER_DYN_LINK -DBOOST_CONTAINER_NO_LIB -DBOOST_JSON_DYN_LINK -DBOOST_JSON_NO_LIB -DBOOST_SYSTEM_DYN_LINK -DBOOST_SYSTEM_NO_LIB -DBOOST_THREAD_DYN_LINK -DBOOST_THREAD_NO_LIB
 
-CXX_INCLUDES = -I/Users/rjacksonxyz/workspace/client-cpp/src -I/Users/rjacksonxyz/workspace/client-cpp -isystem /opt/homebrew/Cellar/boost/1.87.0/include
+CXX_INCLUDES = -I/Users/rjacksonxyz/workspace/client-cpp/src -I/Users/rjacksonxyz/workspace/client-cpp -isystem /opt/homebrew/include
 
 CXX_FLAGSarm64 = -std=c++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk
 

@@ -166,6 +166,30 @@ examples/example.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/example.dir/build.make CMakeFiles/example.dir/examples/example.cpp.s
 .PHONY : examples/example.cpp.s
 
+src/CMakeFiles/3.31.6/CompilerIdCXX/CMakeCXXCompilerId.o: src/CMakeFiles/3.31.6/CompilerIdCXX/CMakeCXXCompilerId.cpp.o
+.PHONY : src/CMakeFiles/3.31.6/CompilerIdCXX/CMakeCXXCompilerId.o
+
+# target to build an object file
+src/CMakeFiles/3.31.6/CompilerIdCXX/CMakeCXXCompilerId.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/polygonio.dir/build.make CMakeFiles/polygonio.dir/src/CMakeFiles/3.31.6/CompilerIdCXX/CMakeCXXCompilerId.cpp.o
+.PHONY : src/CMakeFiles/3.31.6/CompilerIdCXX/CMakeCXXCompilerId.cpp.o
+
+src/CMakeFiles/3.31.6/CompilerIdCXX/CMakeCXXCompilerId.i: src/CMakeFiles/3.31.6/CompilerIdCXX/CMakeCXXCompilerId.cpp.i
+.PHONY : src/CMakeFiles/3.31.6/CompilerIdCXX/CMakeCXXCompilerId.i
+
+# target to preprocess a source file
+src/CMakeFiles/3.31.6/CompilerIdCXX/CMakeCXXCompilerId.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/polygonio.dir/build.make CMakeFiles/polygonio.dir/src/CMakeFiles/3.31.6/CompilerIdCXX/CMakeCXXCompilerId.cpp.i
+.PHONY : src/CMakeFiles/3.31.6/CompilerIdCXX/CMakeCXXCompilerId.cpp.i
+
+src/CMakeFiles/3.31.6/CompilerIdCXX/CMakeCXXCompilerId.s: src/CMakeFiles/3.31.6/CompilerIdCXX/CMakeCXXCompilerId.cpp.s
+.PHONY : src/CMakeFiles/3.31.6/CompilerIdCXX/CMakeCXXCompilerId.s
+
+# target to generate assembly for a file
+src/CMakeFiles/3.31.6/CompilerIdCXX/CMakeCXXCompilerId.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/polygonio.dir/build.make CMakeFiles/polygonio.dir/src/CMakeFiles/3.31.6/CompilerIdCXX/CMakeCXXCompilerId.cpp.s
+.PHONY : src/CMakeFiles/3.31.6/CompilerIdCXX/CMakeCXXCompilerId.cpp.s
+
 src/polygonio.o: src/polygonio.cpp.o
 .PHONY : src/polygonio.o
 
@@ -189,6 +213,54 @@ src/polygonio.s: src/polygonio.cpp.s
 src/polygonio.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/polygonio.dir/build.make CMakeFiles/polygonio.dir/src/polygonio.cpp.s
 .PHONY : src/polygonio.cpp.s
+
+src/websocket/client.o: src/websocket/client.cpp.o
+.PHONY : src/websocket/client.o
+
+# target to build an object file
+src/websocket/client.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/polygonio.dir/build.make CMakeFiles/polygonio.dir/src/websocket/client.cpp.o
+.PHONY : src/websocket/client.cpp.o
+
+src/websocket/client.i: src/websocket/client.cpp.i
+.PHONY : src/websocket/client.i
+
+# target to preprocess a source file
+src/websocket/client.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/polygonio.dir/build.make CMakeFiles/polygonio.dir/src/websocket/client.cpp.i
+.PHONY : src/websocket/client.cpp.i
+
+src/websocket/client.s: src/websocket/client.cpp.s
+.PHONY : src/websocket/client.s
+
+# target to generate assembly for a file
+src/websocket/client.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/polygonio.dir/build.make CMakeFiles/polygonio.dir/src/websocket/client.cpp.s
+.PHONY : src/websocket/client.cpp.s
+
+src/websocket/config.o: src/websocket/config.cpp.o
+.PHONY : src/websocket/config.o
+
+# target to build an object file
+src/websocket/config.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/polygonio.dir/build.make CMakeFiles/polygonio.dir/src/websocket/config.cpp.o
+.PHONY : src/websocket/config.cpp.o
+
+src/websocket/config.i: src/websocket/config.cpp.i
+.PHONY : src/websocket/config.i
+
+# target to preprocess a source file
+src/websocket/config.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/polygonio.dir/build.make CMakeFiles/polygonio.dir/src/websocket/config.cpp.i
+.PHONY : src/websocket/config.cpp.i
+
+src/websocket/config.s: src/websocket/config.cpp.s
+.PHONY : src/websocket/config.s
+
+# target to generate assembly for a file
+src/websocket/config.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/polygonio.dir/build.make CMakeFiles/polygonio.dir/src/websocket/config.cpp.s
+.PHONY : src/websocket/config.cpp.s
 
 src/websocket/models/models.o: src/websocket/models/models.cpp.o
 .PHONY : src/websocket/models/models.o
@@ -227,9 +299,18 @@ help:
 	@echo "... examples/example.o"
 	@echo "... examples/example.i"
 	@echo "... examples/example.s"
+	@echo "... src/CMakeFiles/3.31.6/CompilerIdCXX/CMakeCXXCompilerId.o"
+	@echo "... src/CMakeFiles/3.31.6/CompilerIdCXX/CMakeCXXCompilerId.i"
+	@echo "... src/CMakeFiles/3.31.6/CompilerIdCXX/CMakeCXXCompilerId.s"
 	@echo "... src/polygonio.o"
 	@echo "... src/polygonio.i"
 	@echo "... src/polygonio.s"
+	@echo "... src/websocket/client.o"
+	@echo "... src/websocket/client.i"
+	@echo "... src/websocket/client.s"
+	@echo "... src/websocket/config.o"
+	@echo "... src/websocket/config.i"
+	@echo "... src/websocket/config.s"
 	@echo "... src/websocket/models/models.o"
 	@echo "... src/websocket/models/models.i"
 	@echo "... src/websocket/models/models.s"

@@ -8,7 +8,10 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/Users/rjacksonxyz/workspace/client-cpp/src/CMakeFiles/3.31.6/CompilerIdCXX/CMakeCXXCompilerId.cpp" "CMakeFiles/polygonio.dir/src/CMakeFiles/3.31.6/CompilerIdCXX/CMakeCXXCompilerId.cpp.o" "gcc" "CMakeFiles/polygonio.dir/src/CMakeFiles/3.31.6/CompilerIdCXX/CMakeCXXCompilerId.cpp.o.d"
   "/Users/rjacksonxyz/workspace/client-cpp/src/polygonio.cpp" "CMakeFiles/polygonio.dir/src/polygonio.cpp.o" "gcc" "CMakeFiles/polygonio.dir/src/polygonio.cpp.o.d"
+  "/Users/rjacksonxyz/workspace/client-cpp/src/websocket/client.cpp" "CMakeFiles/polygonio.dir/src/websocket/client.cpp.o" "gcc" "CMakeFiles/polygonio.dir/src/websocket/client.cpp.o.d"
+  "/Users/rjacksonxyz/workspace/client-cpp/src/websocket/config.cpp" "CMakeFiles/polygonio.dir/src/websocket/config.cpp.o" "gcc" "CMakeFiles/polygonio.dir/src/websocket/config.cpp.o.d"
   "/Users/rjacksonxyz/workspace/client-cpp/src/websocket/models/models.cpp" "CMakeFiles/polygonio.dir/src/websocket/models/models.cpp.o" "gcc" "CMakeFiles/polygonio.dir/src/websocket/models/models.cpp.o.d"
   )
 

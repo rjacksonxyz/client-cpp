@@ -96,10 +96,12 @@ example_EXTERNAL_OBJECTS =
 example: CMakeFiles/example.dir/examples/example.cpp.o
 example: CMakeFiles/example.dir/build.make
 example: libpolygonio.a
-example: /opt/homebrew/Cellar/boost/1.87.0/lib/libboost_system.dylib
-example: /opt/homebrew/Cellar/boost/1.87.0/lib/libboost_thread.dylib
-example: /opt/homebrew/Cellar/boost/1.87.0/lib/libboost_json.dylib
-example: /opt/homebrew/Cellar/boost/1.87.0/lib/libboost_container.dylib
+example: /opt/homebrew/lib/libboost_system.dylib
+example: /opt/homebrew/lib/libboost_thread.dylib
+example: /opt/homebrew/lib/libboost_json.dylib
+example: /opt/homebrew/Cellar/openssl@3/3.4.1/lib/libssl.dylib
+example: /opt/homebrew/Cellar/openssl@3/3.4.1/lib/libcrypto.dylib
+example: /opt/homebrew/lib/libboost_container.dylib
 example: CMakeFiles/example.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/rjacksonxyz/workspace/client-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable example"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/example.dir/link.txt --verbose=$(VERBOSE)

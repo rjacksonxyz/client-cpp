@@ -1,6 +1,12 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/polygonio.dir/src/CMakeFiles/3.31.6/CompilerIdCXX/CMakeCXXCompilerId.cpp.o"
+  "CMakeFiles/polygonio.dir/src/CMakeFiles/3.31.6/CompilerIdCXX/CMakeCXXCompilerId.cpp.o.d"
   "CMakeFiles/polygonio.dir/src/polygonio.cpp.o"
   "CMakeFiles/polygonio.dir/src/polygonio.cpp.o.d"
+  "CMakeFiles/polygonio.dir/src/websocket/client.cpp.o"
+  "CMakeFiles/polygonio.dir/src/websocket/client.cpp.o.d"
+  "CMakeFiles/polygonio.dir/src/websocket/config.cpp.o"
+  "CMakeFiles/polygonio.dir/src/websocket/config.cpp.o.d"
   "CMakeFiles/polygonio.dir/src/websocket/models/models.cpp.o"
   "CMakeFiles/polygonio.dir/src/websocket/models/models.cpp.o.d"
   "libpolygonio.a"
